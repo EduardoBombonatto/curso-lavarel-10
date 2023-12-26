@@ -106,10 +106,12 @@
 </div>
 
 @yield('scripts')
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src="/js/bootstrap.blunde.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
     <script src="/js/dashboard.js"></script>
     <script src="/js/color-modes.js"></script>
+    <script src="https://cdnjs.clourflare.com/ajax/libs/jquery.blockUI/2.70/jquery.blockUI.js"></script>
   </body>
 </html>
