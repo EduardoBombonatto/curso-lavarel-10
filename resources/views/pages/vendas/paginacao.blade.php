@@ -33,8 +33,8 @@
                                 <td>{{ $venda->produto->nome }}</td>
                                 <td>{{ $venda->cliente->nome }}</td>
                                 <td>
-                                    <a href="{{ route('atualizar.produto', $produto->id) }}" class="btn btn-light btn-sm">
-                                        Editar
+                                    <a href="{{route('enviarComprovantePorEmail.venda', $venda->id)}}" class="btn btn-light btn-sm">
+                                        Enviar email
                                     </a>
                                 </td>
                             </tr>
