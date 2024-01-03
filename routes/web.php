@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ClientesController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProdutosController;
 use App\Http\Controllers\VendaController;
 use Illuminate\Support\Facades\Route;
@@ -16,8 +17,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
+Route::get('/', [DashboardController::class, 'index'])->name('dashboard.index');
+
+Route::prefix('dashboard')->group(function () {
+    Route::get('/', [DashboardController::class, 'index'])->name('dashboard.index');
 });
 
 Route::prefix('produtos')->group(function () {
@@ -46,7 +49,7 @@ Route::prefix('clientes')->group(function () {
 
 Route::prefix('vendas')->group(function () {
     Route::get('/', [VendaController::class, 'index'])->name('vendas.index');
-    //cria cliente
+    //cria venda
     Route::get('/cadastrarVenda', [VendaController::class, 'cadastrarVenda'])->name('cadastrar.venda');
     Route::post('/cadastrarVenda', [VendaController::class, 'cadastrarVenda'])->name('cadastrar.venda');
     Route::get('/enviarComprovantePorEmail/{id}', [VendaController::class, 'enviarComprovantePorEmail'])->name('enviarComprovantePorEmail.venda');
