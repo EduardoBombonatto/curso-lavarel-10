@@ -41,7 +41,7 @@
             <div class="card-body">
               <h5 class="card-title">Usuarios</h5>
               <p class="card-text">Total de usuario cadastrados.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
+              <a href="{{route('usuario.index')}}" class="btn btn-primary">{{$totalUsuario}}</a>
             </div>
           </div>
         </div>

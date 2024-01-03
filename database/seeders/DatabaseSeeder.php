@@ -12,6 +12,7 @@ class DatabaseSeeder extends Seeder {
             ProdutosSeeder::class,
             ClientesSeeder::class,
             VendaSeeder::class,
+            UsuarioSeeder::class
         ]);
     }
 }
